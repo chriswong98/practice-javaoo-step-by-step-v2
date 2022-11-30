@@ -3,7 +3,7 @@ package ooss;
 public class Klass {
 
     private int number;
-
+    private Student leader;
     public Klass(int number){
         this.number = number;
     }
@@ -29,4 +29,16 @@ public class Klass {
     }
 
 
+    public boolean isLeader(Student leader) {
+        return this.leader==leader;
+    }
+
+    public void assignLeader(Student leader) {
+        if(leader.isIn(this)) {
+            this.leader = leader;
+        }
+        else{
+            System.out.println("It is not one of us.");
+        }
+    }
 }
