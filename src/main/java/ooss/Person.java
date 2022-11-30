@@ -16,4 +16,19 @@ public class Person {
     public String introduce() {
         return "My name is " + name + ". I am " + age + " years old.";
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Person)) return false;
+
+        Person person = (Person) o;
+
+        return id == person.id;
+    }
+
+    @Override
+    public int hashCode() {
+        return id;
+    }
 }
