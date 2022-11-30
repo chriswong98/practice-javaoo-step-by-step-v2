@@ -22,14 +22,14 @@ public class Student extends Person{
         }
     }
 
-
     public boolean isIn(Klass klass) {
         return this.klass==klass;
     }
 
-
     public void join(Klass klass) {
         this.klass=klass;
     }
+
+
 
 }
