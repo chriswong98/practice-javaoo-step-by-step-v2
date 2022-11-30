@@ -35,4 +35,8 @@ public class Teacher extends Person{
     public boolean isTeaching(Student tom) {
         return tom.isIn(klass);
     }
+
+    public String getName(){
+        return name;
+    }
 }

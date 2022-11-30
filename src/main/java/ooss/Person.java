@@ -31,4 +31,14 @@ public class Person {
     public int hashCode() {
         return id;
     }
+
+    public void announce(Student leader, Klass klass){
+        if(this instanceof Teacher) {
+            System.out.println("I am " + name + ", teacher of Class " + klass.getClassNumber() + ". I know " + leader.getName() +" become Leader.");
+        }
+        else if(this instanceof Student) {
+            System.out.println("I am " + name + ", student of Class " + klass.getClassNumber() + ". I know " + leader.getName() +" become Leader.");
+        }
+    }
+
 }

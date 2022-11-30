@@ -35,6 +35,10 @@ public class Student extends Person{
         this.klass=klass;
     }
 
+    public String getName(){
+        return name;
+    }
+
 
 
 }

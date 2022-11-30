@@ -1,11 +1,17 @@
 package ooss;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Klass {
 
     private int number;
     private Student leader;
+    private List<Person> announceList;
+
     public Klass(int number){
         this.number = number;
+        this.announceList = new ArrayList<Person>();
     }
 
 
@@ -40,5 +46,12 @@ public class Klass {
         else{
             System.out.println("It is not one of us.");
         }
+        for(Person p : announceList){
+            p.announce(leader, this);
+        }
+    }
+
+    public void attach(Person person) {
+        this.announceList.add(person);
     }
 }
